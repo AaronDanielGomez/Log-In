@@ -1,0 +1,205 @@
+
+body{
+    height: 100vh;
+    background-color: #0C1020;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.conteiner{
+    position: relative;
+    background-color: #060A1A;
+    border-radius: 50px 5px;
+    width: 350px;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.conteiner::before{
+    content: '';
+    position: absolute;
+    background-image: conic-gradient(#B303C6 20deg, transparent 120deg, transparent 180deg, #10BBDB 20deg,transparent 300deg);
+    width: 450px;
+    height: 600px;
+    animation: rotar 2s infinite linear;
+}
+
+/* Animation to move the border*/
+/* Animación para mover el borde*/    
+
+@keyframes rotar {
+    from{
+        transform: rotate(0deg);
+    }
+
+    to{
+        transform: rotate(360deg);
+    }
+}
+
+
+
+.conteiner::after{
+    content: '';
+    position: absolute;
+    border-radius: 50px 5px;
+    background-color: #0C1020;
+    width: 340px;
+    height: 490px;
+}
+
+
+/* Form */
+/* Formulario */
+
+.form{
+    z-index: 10;
+}
+
+/* Title of the form */
+/* Titulo del formulario*/
+
+
+.conteiner__title{
+    margin-bottom: 5rem;
+    text-align: center;
+}
+
+.form__title{
+    color: #10BBDB;
+}
+
+/* the form input counter */
+/* los conteiner de los input del formulario*/
+
+.form__section{
+    position: relative;
+    margin: 2rem 3rem;
+}
+
+/* Input form */
+/* Input del formulario */
+
+.form__input{
+    outline: none;
+    border: none;
+    border-bottom: 1px solid #10BBDB;
+    color: #10BBDB;
+    padding: .5rem;
+    background-color: #0C1020;
+
+}
+
+/* Form labels*/
+/* Los labels del formulario*/
+
+.form__label{
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    color: #57d5eb;
+    pointer-events: none;
+    transition-property: transform,font-size;
+    transition-duration: .3s;
+    transition-timing-function: ease;
+    
+}
+
+
+.form__input:focus + .form__label,
+.form__input:valid + .form__label{
+    transform: translateY(-25px);
+    font-size: 13px;
+}
+
+/* Input icons*/
+/* Iconos del los inputs*/
+
+.conteiner__icon{
+    position: absolute;
+    top: 8px;
+    left: -30px;
+    color: #10BBDB;
+}
+
+/* Eye icon to view password*/
+/* Icono del ojo para ver la contraseña*/
+
+.conteiner__icon-eye{
+    position: absolute;
+    top: 5px;
+    right: 0;
+    width: 28px;
+    height: 28px;
+    background-color: #0C1020;
+    text-align: center;
+    color: #10BBDB;
+    user-select: none;
+}
+
+
+.icon{
+    cursor: pointer;
+    font-size: 18px;
+}
+
+/* contenedor de botones*/
+/* Contenedor del boton del formulario */
+
+.conteiner__button{
+    margin-top: 3rem;
+    display: flex;
+    justify-content: center;
+}
+
+.form__button{
+    cursor: pointer;
+    border-radius: 50px;
+    background-color: transparent;
+    border: none;
+    border: 1px solid #10BBDB;
+    color: #10BBDB;
+    font-size: 20px;
+    padding: .5rem 8rem;
+    transition: color .3s,background-color .3s ease;
+}
+
+.form__button:hover{
+    background-color:#10bddb64 ;
+    color: #ffffff;
+}
+
+
+/* Forgot your password and registration links*/
+
+/* Enlaces de olvidasde tu contraseña y registrarse*/
+
+.conteiner__a{
+    margin-top: 3rem;
+    width: 300px;
+    z-index: 10;
+    display: flex;
+    justify-content: space-between;
+    color: #10BBDB;
+}
+
+.form__a > a{
+    text-decoration: none;
+    color: #10BBDB;
+}
+
+
+
+.form__a > a:hover{
+    text-decoration: underline;
+}
+
+
+
+
